@@ -1,0 +1,32 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(0.75px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-0.75px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(2deg);
+  }
+}
