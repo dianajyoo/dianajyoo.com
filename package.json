@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "cd vendor/js/ && gulp watch",
+    "start": "python -m SimpleHTTPServer"
   },
   "author": "Diana J. Yoo",
   "license": "ISC",
