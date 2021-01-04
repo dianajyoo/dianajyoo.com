@@ -1,33 +1,32 @@
-function showDiv(div) {
-  const id = div.getAttribute('href') || '';
+function toggleView(el) {
+  const id = el.getAttribute('href') || '';
   const hiddenDiv = document.querySelector(`${id}`);
-  hiddenDiv.classList.remove('is-hidden');
 
-  if (hiddenDiv.id === 'tools') {
+  if (!this.currentView.classList.contains('is-hidden')) {
+    this.currentView.classList.add('is-hidden');
+  }
+
+  hiddenDiv.classList.remove('is-hidden');
+  this.currentView = hiddenDiv
+
+  if (hiddenDiv.id === 'whoami') {
     grow();
   }
 }
 
-function enlargeImage(className) {
-  const img = document.querySelector(`.${className}`);
+// function enlargeImage(className) {
+//   const img = document.querySelector(`.${className}`);
 
-  if (!img.classList.contains('is-modal-open')) {
-    img.classList.add('is-modal-open');
-    img.style.objectFit = 'contain';
-    img.style.cursor = 'zoom-out';
-    return;
-  }
-  img.classList.remove('is-modal-open');
-  img.style.objectFit = 'cover';
-  img.style.cursor = 'default';
-}
-
-function removeFilter() {
-  if (isSafari()) {
-    const gradient = document.querySelector('.radial-gradient');
-    gradient.style.filter = 'none';
-  }
-}
+//   if (!img.classList.contains('is-modal-open')) {
+//     img.classList.add('is-modal-open');
+//     img.style.objectFit = 'contain';
+//     img.style.cursor = 'zoom-out';
+//     return;
+//   }
+//   img.classList.remove('is-modal-open');
+//   img.style.objectFit = 'cover';
+//   img.style.cursor = 'default';
+// }
 
 function grow() {
   const bars = document.querySelectorAll('.bar');
@@ -42,19 +41,14 @@ function isSafari() {
   return navigator.vendor.indexOf('Apple') > -1;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  removeFilter();
+function init() {
+  this.currentView = document.querySelector('#projects');
 
   document.addEventListener('click', (e) => {
     if (e.target.tagName === 'A') {
-      showDiv(e.target);
-    }
-
-    if (e.target.tagName === 'IMG') {
-      const className = e.target.classList[0];
-      if (isDesktop()) {
-        enlargeImage(className);
-      }
+      toggleView(e.target);
     }
   });
-});
+}
+
+document.addEventListener('DOMContentLoaded', init.bind(this));

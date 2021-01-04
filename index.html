@@ -8,133 +8,132 @@
     />
     <link href="src/images/favicon.svg" rel="icon" />
     <link href="src/scss/main.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" rel="stylesheet" />
     <title>Diana J. Yoo</title>
   </head>
 
   <body>
     <main id="root">
-      <section class="intro">
-        <header>
-          <h1>diana j. yoo</h1>
-        </header>
+      <nav>
         <a href="#whoami" class="nav-item">whoami.</a>
         <a href="#projects" class="nav-item">projects.</a>
-        <a href="#tools" class="nav-item">tools.</a>
         <a href="#roll" class="nav-item">camera roll.</a>
         <a href="#jams" class="nav-item">jams.</a>
-      </section> 
+      </nav>
+      <header>
+        <h1>diana j. yoo</h1>
+      </header>
       <section id="whoami" class="is-hidden">
-        <h2>whoami.</h2>
         <p>
           Hi there! <span role="img" aria-label="Peace emoji">✌🏻</span> I'm Diana — 유지영, a
-          front-end engineer based in NYC, currently living in NJ. 
+          front-end engineer based in NYC, currently living in NJ.
           When I'm not exploring the <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/dianajyoo">interweb</a>, I like to read, travel, drink Americano, and pet cats.
           <br><br>
           Send an <a target="_blank" rel="noopener noreferrer" href="mailto:diana.yooj@gmail.com">email</a> to chat!
         </p>
+        <div class="tools">
+          <ul>
+            <li>
+              <h4>JavaScript</h4>
+              <div class="bar js"></div>
+            </li>
+            <li>
+              <h4>ReactJS</h4>
+              <div class="bar react"></div>
+            </li>
+            <li>
+              <h4>Redux</h4>
+              <div class="bar redux"></div>
+            </li>
+            <li>
+              <h4>jQuery</h4>
+              <div class="bar jquery"></div>
+            </li>
+            <li>
+              <h4>NodeJS</h4>
+              <div class="bar node"></div>
+            </li>
+            <li>
+              <h4>HTML5</h4>
+              <div class="bar html"></div>
+            </li>
+            <li>
+              <h4>Sass</h4>
+              <div class="bar sass"></div>
+            </li>
+            <li>
+              <h4>Ruby/Rails</h4>
+              <div class="bar rails"></div>
+            </li>
+            <li>
+              <h4>Figma</h4>
+              <div class="bar figma"></div>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section id="tools" class="is-hidden">
-        <h2>tools.</h2>
+      <section id="projects">
         <ul>
           <li>
-            <h4>JavaScript</h4>
-            <div class="bar js"></div>
+            <div class="details-wrapper is-stacked">
+              <div class="details">
+                <h3><a href="https://dianajyoo.github.io/tetris/">tetris</a></h3>
+                <p>classic 80's tetris game</p>
+              </div>
+              <div class="img">
+                <img src="src/images/tetris.png" class=""/>
+              </div>
+            </div>
           </li>
           <li>
-            <h4>ReactJS</h4>
-            <div class="bar react"></div>
+            <div class="details-wrapper is-stacked">
+              <div class="details">
+                <h3>corcus dashboard</h3>
+                <p>dashboard designed and built for corcus, inc.</p>
+              </div>
+              <div class="img">
+                <img src="src/images/dashboard.png" class="" />
+              </div>
+            </div>
           </li>
           <li>
-            <h4>Redux</h4>
-            <div class="bar redux"></div>
+            <div class="details-wrapper is-stacked">
+              <div class="details">
+                <h3>corcus multiform</h3>
+                <p>multiform page built with ReactJS</p>
+              </div>
+              <div class="img">
+                <img src="src/images/multiform.png" class="" />
+              </div>
+            </div>
           </li>
           <li>
-            <h4>jQuery</h4>
-            <div class="bar jquery"></div>
-          </li>
-          <li>
-            <h4>NodeJS</h4>
-            <div class="bar node"></div>
-          </li>
-          <li>
-            <h4>HTML5</h4>
-            <div class="bar html"></div>
-          </li>
-          <li>
-            <h4>Sass</h4>
-            <div class="bar sass"></div>
-          </li>
-          <li>
-            <h4>Ruby/Rails</h4>
-            <div class="bar rails"></div>
-          </li>
-          <li>
-            <h4>Figma</h4>
-            <div class="bar figma"></div>
-          </li>
-        </ul>
-      </section>
-      <section id="projects" class="is-hidden">
-        <h2>projects.</h2>
-        <ul class="is-carousel">
-          <li>
-            <button type="button">
-              <img src="src/images/yelpish-home.png" class="six" />
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              <img src="src/images/yelpish.png" class="cinq"/>
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              <img src="src/images/tetris.png" class="quatre"/>
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              <img src="src/images/dashboard.png" class="trois" />
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              <img src="src/images/multiform.png" class="deux" />
-            </button>
-          </li>
-          <li>
-            <button type="button">
-              <img src="src/images/votecracy.png" class="un" />
-            </button>
+            <div class="details-wrapper is-stacked">
+              <div class="details">
+                <h3>votecracy</h3>
+                <p>mock voting app to search and vote for candidates</p>
+              </div>
+              <div class="img">
+                <img src="src/images/votecracy.png" class="un" />
+              </div>
+            </div>
           </li>
         </ul>
       </section>
       <section id="roll" class="is-hidden">
-        <h2>camera roll.</h2>
-        <p>building...</p>
+        <ul>
+          <li><img src="src/images/roll/DSC_0030.jpeg" loading="lazy" alt="Ferry in haze" /></li>
+          <li><img src="src/images/roll/DSC_0038.jpeg" loading="lazy" alt="Seagull" /></li>
+          <li><img src="src/images/roll/DSC_0078.jpeg" loading="lazy" alt="Museum arch" /></li>
+          <li><img src="src/images/roll/DSC_0207.jpeg" loading="lazy" alt="Deer in woods" /></li>
+          <li><img src="src/images/roll/DwbbY.jpeg" loading="lazy" alt="Museum" /></li>
+        </ul>
       </section>
       <section id="jams" class="is-hidden">
         <h2>jams.</h2>
         <p>building...</p>
       </section>
-      <section class="radial-gradient"></section>
     </main>
 
     <script src="src/js/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script>
-      const slider = tns({
-        container: '.is-carousel',
-        controls: false,
-        navPosition: 'bottom',
-        mouseDrag: true,
-        responsive: {
-          1024: {
-            disable: true
-          }
-        }
-      });
-    </script>
   </body>
 </html>
