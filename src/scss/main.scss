@@ -50,19 +50,6 @@ li {
   display: none;
 }
 
-// .is-modal-open {
-//   width: 100%;
-//   height: 100% !important;
-//   position: fixed;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   left: 0;
-//   right: 0;
-//   padding: 2rem;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   z-index: 1000;
-// }
-
 .is-grow {
   animation: grow 2s forwards;
   animation-delay: 0.2s;
@@ -82,9 +69,11 @@ nav {
   right: -10rem;
   animation-delay: 0.8s;
   z-index: 1000;
+
   @media (min-width: 768px) {
     top: 15rem;
   }
+
   a {
     margin-right: 1rem;
     padding: 0.25rem;
@@ -101,6 +90,7 @@ header {
   text-align: center;
   position: sticky;
   top: 0;
+
   h1 {
     font-family: 'Liquido', sans-serif;
     font-size: 5rem;
@@ -116,6 +106,7 @@ header {
       0.025em 0.025em 0 mix($ink, $pale-green, 68%),
       0.03em 0.03em 0 mix($ink, $pale-green, 70%),
       0.035em 0.035em 0 mix($ink, $pale-green, 72%);
+
     @media (min-width: 768px) {
       font-size: 6rem;
     }
@@ -126,12 +117,11 @@ section {
   max-width: 900px;
   margin: 0 auto;
   padding: 1.5rem;
+
   @media (min-width: 768px) {
     padding: 3rem;
   }
-  @media (min-width: 1440px) {
-    // padding: 3rem;
-  }
+
   h2 {
     font-family: 'Liquido', serif;
     font-size: 2rem;
@@ -140,51 +130,44 @@ section {
   }
 }
 
-// .radial-gradient {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   background: radial-gradient(
-//       circle closest-side,
-//       $fuschia,
-//       $pale-green,
-//       transparent
-//     )
-//     center / 50% no-repeat;
-//   filter: blur(20px);
-// }
-
 #whoami {
   margin-right: 18px;
+
   @media (min-width: 768px) {
     margin-right: auto;
   }
+
   p {
     margin-top: 1rem;
+
     @media (min-width: 1440px) {
       margin-top: 2rem;
     }
   }
+
   a {
     position: relative;
     color: $fuschia;
     opacity: 0.7;
     @include hover(17px);
   }
+
   .tools {
     margin-top: 3rem;
+
     ul {
       max-width: 768px;
       margin-top: 1rem;
+
       @media (min-width: 1440px) {
         margin-top: 2rem;
       }
     }
+
     li:not(:first-of-type) {
       margin-top: 0.75rem;
     }
+
     h4 {
       font-family: 'Inconsolata', sans-serif;
       font-weight: normal;
@@ -193,103 +176,116 @@ section {
   }
 }
 
-.is-stacked {
-  @media (min-width: 1024px) {
-    box-shadow: 1px -1px 1px $ink, 10px -10px 0 -5px $grey,
-      10px -10px 1px -4px $ink, 20px -20px 0 -10px $grey,
-      20px -20px 1px -9px $ink, 30px -30px 0 -15px $grey,
-      30px -30px 1px -14px $ink, 40px -40px 0 -20px $grey,
-      40px -40px 1px -19px $ink;
-  }
-  > div {
-    border-bottom: 1.5px solid $ink;
-    border-left: 1.5px solid $ink;
-  }
-}
-
 #projects {
   margin-right: 1rem;
+
   @media (min-width: 768px) {
     margin-right: auto;
   }
+
   ul {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: auto;
     gap: 3rem 0;
     justify-content: center;
+
     @media (min-width: 768px) {
       grid-template-columns: 400px;
     }
+
     @media (min-width: 1024px) {
       margin-top: 3rem;
       grid-template-columns: 400px 400px;
       gap: 3rem;
     }
+
     @media (min-width: 1440px) {
       gap: 5rem;
     }
   }
-  .details-wrapper {
-    box-shadow: 1px -1px 1px $ink, 10px -10px 0 -5px $grey,
-      10px -10px 1px -4px $ink, 20px -20px 0 -10px $grey,
-      20px -20px 1px -9px $ink, 30px -30px 0 -15px $grey,
-      30px -30px 1px -14px $ink, 40px -40px 0 -20px $grey,
-      40px -40px 1px -19px $ink;
-    .img {
-      height: 301.5px;
-      border-bottom: 1.5px solid $ink;
-      border-left: 1.5px solid $ink;
+
+  .card-wrapper {
+    border: 1.5px solid $ink;
+  }
+
+  li {
+    position: relative;
+    z-index: 5;
+  }
+
+  .card {
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: $grey;
+      width: 100%;
+      height: 100%;
+      max-height: calc(400px - 1rem);
+      border: 1px solid $ink;
+      z-index: -1;
+    }
+
+    &-inner {
+      position: relative;
+      border: 1px solid $ink;
+      z-index: 10;
+    }
+
+    &-inner-one:before {
+      top: -0.5rem;
+      left: 0.5rem;
+      z-index: 3;
+    }
+
+    &-inner-two:before {
+      top: -1rem;
+      left: 1rem;
+      z-index: 2;
+    }
+
+    &-outer:before {
+      top: -1.5rem;
+      left: 1.5rem;
+      z-index: 1;
     }
   }
+
   .details {
     padding: 1rem;
     letter-spacing: 0.05em;
     background-color: $white;
-    > * {
+    border-bottom: 1px solid $ink;
+
+    & > * {
       font-family: 'Inconsolata', sans-serif;
     }
+
     h3 {
       font-weight: 600;
     }
+
     p {
       margin-top: 0.5rem;
+      font-size: 14px;
     }
+
     a {
       position: relative;
       @include hover(20px);
     }
   }
+
+  .img {
+    height: 301.5px;
+    background-color: $grey;
+  }
+
   img {
     width: 100%;
     height: 300px;
     object-fit: cover;
-    @media (min-width: 1024px) {
-      // box-shadow: 10px 10px 14px 1px rgba(00, 00, 00, 0.2);
-    }
-  }
-  // Tinyslider
-  .tns-nav {
-    display: grid;
-    grid-template-columns: repeat(6, auto);
-    gap: 0 6px;
-    margin-top: 2rem;
-    justify-content: center;
-  }
-  [data-nav] {
-    width: 9px;
-    height: 9px;
-    border: 0.5px solid $fuschia;
-    border-radius: 50%;
-    &.tns-nav-active {
-      background: linear-gradient(to bottom, $pale-green 0%, $fuschia 75%);
-      border: 0;
-    }
-  }
-  #tns1-mw {
-    @media (min-width: 1024px) {
-      overflow: unset;
-    }
+    object-position: bottom;
   }
 }
 
@@ -300,15 +296,19 @@ section {
   background: linear-gradient(to right, $fuschia 0%, $pale-green 75%);
   border-radius: 20px;
   opacity: 0;
+
   &.jquery {
     width: 75%;
   }
+
   &.node {
     width: 80%;
   }
+
   &.rails {
     width: 60%;
   }
+
   &.figma {
     width: 50%;
   }
@@ -320,11 +320,14 @@ section {
     grid-template-columns: auto;
     gap: 1rem 0;
     margin-top: 1rem;
+
     @media (min-width: 1024px) {
       gap: 2rem 0;
     }
+
     & > li {
       width: 100%;
+
       img {
         width: 100%;
         object-fit: cover;
@@ -336,6 +339,7 @@ section {
 #jams {
   p {
     margin-top: 1rem;
+
     @media (min-width: 1440px) {
       margin-top: 2rem;
     }
@@ -347,6 +351,7 @@ section {
   position: absolute;
   top: 20%;
   right: 0;
+
   @media (min-width: 1440px) {
     width: unset;
     left: 50%;
