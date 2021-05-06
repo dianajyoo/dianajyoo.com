@@ -1,17 +1,41 @@
 @font-face {
-  font-family: 'Liquido';
-  src: url('../../vendor/fonts/Liquido.otf');
+  font-family: 'Mogia';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../vendor/fonts/MogiaOutline.woff');
 }
 
 @font-face {
-  font-family: 'Inconsolata';
+  font-family: 'Mogia';
   font-style: normal;
-  src: url('../../vendor/fonts/Inconsolata-Regular.ttf');
+  font-weight: normal;
+  src: url('../../vendor/fonts/MogiaOutline.woff2');
 }
 
 @font-face {
-  font-family: 'Inconsolata';
+  font-family: 'Mogia';
   font-style: normal;
-  font-weight: 600;
-  src: url('../../vendor/fonts/Inconsolata-SemiBold.ttf');
+  font-weight: normal;
+  src: url('../../vendor/fonts/MogiaRegular.woff');
+}
+
+@font-face {
+  font-family: 'Mogia';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../vendor/fonts/MogiaRegular.woff2');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: normal;
+  src: url('../../vendor/fonts/Lora-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../vendor/fonts/Lora-Regular.ttf');
 }

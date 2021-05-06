@@ -1,163 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <link href="src/images/favicon.svg" rel="icon" />
-    <link href="src/scss/main.css" rel="stylesheet" />
-    <title>Diana J. Yoo</title>
-  </head>
 
-  <body>
-    <main id="root">
-      <nav>
-        <a href="#whoami" class="nav-item">whoami.</a>
-        <a href="#projects" class="nav-item">projects.</a>
-        <a href="#roll" class="nav-item">camera roll.</a>
-        <a href="#jams" class="nav-item">jams.</a>
-      </nav>
-      <header>
-        <h1>diana j. yoo</h1>
-      </header>
-      <section id="whoami" class="is-hidden">
-        <p>
-          Hi there! <span role="img" aria-label="Peace emoji">✌🏻</span> I'm Diana — 유지영, a
-          front-end engineer based in NYC, currently living in NJ.
-          When I'm not exploring the <a target="_blank" rel="noopener noreferrer" href="https://www.github.com/dianajyoo">interweb</a>, I like to read, travel, drink Americano, and pet cats.
-          <br><br>
-          Send an <a target="_blank" rel="noopener noreferrer" href="mailto:diana.yooj@gmail.com">email</a> to chat!
-        </p>
-        <div class="tools">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link href="src/images/favicon.svg" rel="icon" />
+  <link href="src/scss/main.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <title>Diana J. Yoo</title>
+</head>
+
+<body>
+  <main id="root">
+    <header>
+      <h1>Di<span class="arch"></span>n<span class="arch"></span> J. Yoo</h1>
+    </header>
+
+    <div class="main-content">
+      <aside>
+        <nav>
+          <a href="#whoami" class="nav-item">whoami.</a>
+          <a href="#projects" class="nav-item">projects.</a>
+          <a href="#roll" class="nav-item">camera roll.</a>
+        </nav>
+      </aside>
+      <div class="content-wrapper">
+        <section id="whoami" class="is-hidden">
+          <p>
+            Hi there! <span role="img" aria-label="Peace emoji">✌🏻</span> I'm Diana / 유지영, a
+            front-end engineer based in NYC, currently living in NJ.
+            When I'm not exploring the <a target="_blank" rel="noopener noreferrer"
+              href="https://www.github.com/dianajyoo">interweb</a>, I like to read, travel, drink Americano, and pet
+            cats.
+            <br><br>
+            Send an <strong><a target="_blank" rel="noopener noreferrer"
+                href="mailto:diana.yooj@gmail.com">email</a></strong> to chat!
+          </p>
+        </section>
+        <section id="projects">
           <ul>
             <li>
-              <h4>JavaScript</h4>
-              <div class="bar js"></div>
+              <div class="card card-outer">
+                <h3><a href="https://separate-field-foxtail.glitch.me/" target="_blank">moodsic</a></h3>
+                <p>take a mood quiz & get a playlist suggestion 🎧</p>
+              </div>
             </li>
             <li>
-              <h4>ReactJS</h4>
-              <div class="bar react"></div>
-            </li>
-            <li>
-              <h4>Redux</h4>
-              <div class="bar redux"></div>
-            </li>
-            <li>
-              <h4>jQuery</h4>
-              <div class="bar jquery"></div>
-            </li>
-            <li>
-              <h4>NodeJS</h4>
-              <div class="bar node"></div>
-            </li>
-            <li>
-              <h4>HTML5</h4>
-              <div class="bar html"></div>
-            </li>
-            <li>
-              <h4>Sass</h4>
-              <div class="bar sass"></div>
-            </li>
-            <li>
-              <h4>Ruby/Rails</h4>
-              <div class="bar rails"></div>
-            </li>
-            <li>
-              <h4>Figma</h4>
-              <div class="bar figma"></div>
+              <div class="card card-outer">
+                <h3><a href="https://dianajyoo.github.io/tetris/" target="_blank">tetris</a></h3>
+                <p>classic 80's tetris game 🧱</p>
+              </div>
             </li>
           </ul>
-        </div>
-      </section>
-      <section id="projects">
-        <ul>
-          <li>
-            <div class="card card-outer">
-              <div class="card card-inner-two">
-                <div class="card card-inner-one">
-                  <div class="card-inner">
-                    <div class="details">
-                      <h3><a href="https://dianajyoo.github.io/tetris/">tetris</a></h3>
-                      <p>classic 80's tetris game</p>
-                    </div>
-                    <div class="img">
-                      <img src="src/images/tetris.png" class="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card card-outer">
-              <div class="card card-inner-two">
-                <div class="card card-inner-one">
-                  <div class="card-inner">
-                    <div class="details">
-                      <h3>corcus dashboard</h3>
-                      <p>dashboard designed and built for corcus, inc.</p>
-                    </div>
-                    <div class="img">
-                      <img src="src/images/dashboard.png" class="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card card-outer">
-              <div class="card card-inner-two">
-                <div class="card card-inner-one">
-                  <div class="card-inner">
-                    <div class="details">
-                      <h3>corcus multiform</h3>
-                      <p>multiform page built with ReactJS</p>
-                    </div>
-                    <div class="img">
-                      <img src="src/images/multiform.png" class="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card card-outer">
-              <div class="card card-inner-two">
-                <div class="card card-inner-one">
-                  <div class="card-inner">
-                    <div class="details">
-                      <h3>votecracy</h3>
-                      <p>mock voting app to search and vote for candidates</p>
-                    </div>
-                    <div class="img">
-                      <img src="src/images/votecracy.png" class="un" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section id="roll" class="is-hidden">
-        <ul>
-          <li><img src="src/images/roll/DSC_0030.jpeg" loading="lazy" alt="Ferry in haze" /></li>
-          <li><img src="src/images/roll/DSC_0038.jpeg" loading="lazy" alt="Seagull" /></li>
-          <li><img src="src/images/roll/DSC_0078.jpeg" loading="lazy" alt="Museum arch" /></li>
-          <li><img src="src/images/roll/DSC_0207.jpeg" loading="lazy" alt="Deer in woods" /></li>
-          <li><img src="src/images/roll/DwbbY.jpeg" loading="lazy" alt="Museum" /></li>
-        </ul>
-      </section>
-      <section id="jams" class="is-hidden">
-        <h2>jams.</h2>
-        <p>building...</p>
-      </section>
-    </main>
+        </section>
+        <section id="roll" class="is-hidden">
+          <ul>
+            <li><img src="src/images/roll/DSC_0030.jpeg" loading="lazy" alt="Ferry in haze" /></li>
+            <li><img src="src/images/roll/DSC_0038.jpeg" loading="lazy" alt="Seagull" /></li>
+            <li><img src="src/images/roll/DSC_0078.jpeg" loading="lazy" alt="Museum arch" /></li>
+            <li><img src="src/images/roll/DSC_0207.jpeg" loading="lazy" alt="Deer in woods" /></li>
+            <li><img src="src/images/roll/DwbbY.jpeg" loading="lazy" alt="Museum" /></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
 
-    <script src="src/js/index.js"></script>
-  </body>
+  <script src="src/js/index.js"></script>
+</body>
+
 </html>
