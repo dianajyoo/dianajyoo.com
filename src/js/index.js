@@ -8,10 +8,6 @@ function toggleView(el) {
 
   hiddenDiv.classList.remove('is-hidden');
   this.currentView = hiddenDiv;
-
-  if (hiddenDiv.id === 'whoami') {
-    grow();
-  }
 }
 
 function init() {

@@ -30,9 +30,28 @@ a {
   line-height: 1;
   text-decoration: none;
   color: unset;
+  position: relative;
+  display: inline-block;
 
-  &:hover {
-    font-style: italic;
+  &.move-down:before {
+    top: 60%;
+    height: 2px;
+  }
+
+  &:before {
+    content: '';
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: $red;
+    transition: width 0.5s;
+  }
+
+  &:hover:before {
+    width: 100%;
   }
 }
 
@@ -123,8 +142,11 @@ aside {
 }
 
 .nav-item {
-  display: block;
   padding: 0.5rem;
+
+  a {
+    display: inline-block;
+  }
 
   &:not(:first-child) {
     border-top: 1px solid $red;
@@ -206,7 +228,7 @@ aside {
   }
 
   .nav-item {
-    padding: 1.375rem 1rem;
+    padding: 1.28rem 1rem;
   }
 
   // Sections
