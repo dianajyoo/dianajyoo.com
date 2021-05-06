@@ -90,6 +90,7 @@ header {
 
 aside {
   border: 1px solid $red;
+  border-bottom: 0;
 }
 
 #root {
@@ -150,9 +151,15 @@ aside {
   padding: 0.5rem;
 }
 
+#whoami {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #roll {
   ul {
-    max-width: 768px;
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -160,6 +167,10 @@ aside {
   img {
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
+    max-width: 100%;
+    width: auto;
+    min-height: 250px;
+    object-fit: cover;
   }
 }
 
@@ -181,6 +192,7 @@ aside {
 
   aside {
     flex-basis: 20%;
+    border-bottom: 1px solid $red;
   }
 
   .content-wrapper {
@@ -214,7 +226,10 @@ aside {
 }
 
 /* DESKTOP */
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
+  #roll img {
+    min-height: 405px;
+  }
 }
 
 @media (min-width: 1860px) {
