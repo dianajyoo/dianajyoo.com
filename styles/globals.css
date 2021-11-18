@@ -1,16 +1,134 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: normal;
+  src: url('../public/fonts/Lora-Italic.ttf');
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/Lora-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/SpaceGrotesk-Regular.woff');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/SpaceGrotesk-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'Grotesk Med';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/Grotesk-Medium.woff');
+}
+
+@font-face {
+  font-family: 'Grotesk Med';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/Grotesk-Medium.woff2');
+}
+
+@font-face {
+  font-family: 'Grotesk Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/SpaceGrotesk-SemiBold.woff');
+}
+
+@font-face {
+  font-family: 'Grotesk Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/SpaceGrotesk-SemiBold.woff2');
+}
+
+:root {
+  --white: #fff;
+  --red: #ea3c34;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: var(--red);
+  scroll-behavior: smooth;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+button {
+  color: inherit;
+  text-decoration: none;
+  line-height: 1;
+  transition: all 0.3s ease;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+a:hover,
+button:hover,
+button.active {
+  color: var(--white);
+  background-color: var(--red);
+}
+
+button {
+  width: 100%;
+  background: none;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Grotesk Med', serif;
+  font-weight: normal;
+  font-size: 24px;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+p {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+}
+
+@media (min-width: 1024px) {
+  p {
+    font-size: 18px;
+  }
 }

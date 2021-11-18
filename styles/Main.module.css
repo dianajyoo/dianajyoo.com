@@ -1,0 +1,25 @@
+.main {
+  border: 1px solid var(--red);
+}
+
+.main li {
+  padding: 1rem;
+}
+
+.main li:not(:first-child) {
+  border-top: 1px solid var(--red);
+}
+
+.main > p {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main {
+    border-left: 0;
+  }
+
+  .main li:last-child {
+    border-bottom: 1px solid var(--red);
+  }
+}

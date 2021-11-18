@@ -1,0 +1,6 @@
+.header {
+  padding: 1rem;
+  border-top: 1px solid var(--red);
+  border-left: 1px solid var(--red);
+  border-right: 1px solid var(--red);
+}
