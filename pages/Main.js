@@ -5,9 +5,9 @@ function Main({ content }) {
     if (!content) {
       return (
         <p>
-          Hi there! <span role="img" aria-label="Peace emoji">✌🏻</span> I'm Diana / 유지영, a
-          front-end engineer based in NYC, currently living in NJ.
-          When I'm not exploring the <a target="_blank" rel="noopener noreferrer"
+          Hi there! <span role="img" aria-label="Peace emoji">✌🏻</span> I&apos;m Diana / 유지영, a
+          software engineer based in NYC, currently living in NJ.
+          When I&apos;m not exploring the <a target="_blank" rel="noopener noreferrer"
             href="https://www.github.com/dianajyoo">interweb</a>, I like to read, travel, drink Americano, and pet
           cats.
           <br /><br />
@@ -21,7 +21,7 @@ function Main({ content }) {
       <ul>
         <li>
           <h2>
-            <a href='https://separate-field-foxtail.glitch.me/' target='_blank'>
+            <a href='https://separate-field-foxtail.glitch.me/' target='_blank' rel='noreferrer'>
               moodsic
             </a>
           </h2>
@@ -29,17 +29,18 @@ function Main({ content }) {
         </li>
         <li>
           <h2>
-            <a href='https://dianajyoo.github.io/tetris/' target='_blank'>
+            <a href='https://dianajyoo.github.io/tetris/' target='_blank' rel='noreferrer'>
               tetris
             </a>
           </h2>
-          <p>classic 80's tetris game 🧱</p>
+          <p>classic 80&apos;s tetris game 🧱</p>
         </li>
         <li>
           <h2>
             <a
               href='https://cosmic-shrouded-strawflower.glitch.me/'
               target='_blank'
+              rel='noreferrer'
             >
               inner sol
             </a>
